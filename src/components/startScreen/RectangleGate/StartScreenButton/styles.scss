@@ -1,0 +1,77 @@
+.startScreen__button {
+
+    transform: translate(-50%,-50%);
+    font-family: Tomorrow, 'Abel', sans-serif;
+    cursor: pointer;
+    font-size: 2.2rem;
+
+    text-align: center;
+    border-radius:(3px);
+    color: rgba(120, 219, 251, 1);
+    // text-shadow: #B4F8FE;
+    // box-shadow:0 2px 10px 3px #78DBFB;
+    opacity: 1;
+    transition: all 2s ease-in-out .6s;
+    // border: 1px solid #B4F8FE;
+    user-select: none; /* Standard */
+    .startScreen__button_text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    
+    &:hover {
+        // text-shadow: rgb(253, 52, 176);
+        // box-shadow:0 2px 10px 3px rgb(255, 1, 158);
+        // color: rgb(255, 1, 158);
+        opacity: 1;
+        font-size: 2.8rem;
+        background-color: rgba(255,255,255,.1);
+    }
+
+    &:active {
+        background-color: rgba(255,255,255,.3);
+        .startScreen_frame {
+
+        }
+    }
+
+    .startScreen_frame {
+        border: 1px solid #B4F8FE;
+        box-shadow:0 2px 10px 3px #78DBFB;
+        width: 100px;
+        position: absolute;
+        transition: all .2s linear;
+    }
+    
+    .startScreen_frame-1 {
+        transform:  translate(-72px, -45px) rotate(63deg);
+        left: 0;
+        top: 0;
+    }
+    
+    .startScreen_frame-2 {
+        transform:  translate(73px, -45px) rotate(-62deg);
+        right: 0;
+        top: 0;
+    }
+    
+    .startScreen_frame-3 {
+        transform:  translate(-73px, 45px ) rotate(-61deg);
+        left: 0;
+        bottom: 0;
+    }
+    
+    .startScreen_frame-4 {
+        transform:  translate(75px, 45px ) rotate(60deg);
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.startScreen__button_animate {
+    font-size: 30rem;
+    color:rgba(255,255,255,0);
+    opacity: 0;
+}

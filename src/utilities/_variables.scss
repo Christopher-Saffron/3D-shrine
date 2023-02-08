@@ -1,0 +1,6 @@
+@mixin neonBox {
+    border: 5px solid #46e2fa;
+    color: rgb(75, 255, 255);
+    box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #0ba9ca, 0 0 15px #0ba9ca,
+    0 0 20px #0ba9ca, 0 0 25px #0ba9ca, inset 0px 0px 20px 1px #0ba9ca;
+}
