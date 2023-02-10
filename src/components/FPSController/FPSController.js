@@ -31,7 +31,6 @@ function FPSController({ fps }) {
             set({ frameloop: 'never' });
             advance();
         }
-        console.log(frameloop)
     }, [frameloop]);
   
     return null;

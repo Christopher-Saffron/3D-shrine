@@ -54,6 +54,17 @@
                 transform: scaleX(1);
             }
         }
+        .logo {
+            // border: 1px solid red;
+            position: relative;
+            img {
+                position: absolute;
+                top:100%;
+                left: 50px;
+                transform: translate(-50%,-50%);
+                height: 100px;
+            }
+        }
         .navTrigger {
             display: none;
         }

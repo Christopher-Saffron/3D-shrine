@@ -71,7 +71,7 @@ export default function Model(props) {
 
     //FOR TESTING U CAN PAUSE ANIM
     if (animating) {
-      actions['enterPortal'].paused = true;
+      // actions['enterPortal'].paused = true;
       return
     } else {
       ////MAKE A 3s timeout before calling for next stage
@@ -146,14 +146,7 @@ export default function Model(props) {
 
 
   return (
-    <>
-      {/* <mesh>
-          <planeBufferGeometry args={[2,3,2]} />
-          
-          <Html className='noEvents' position={[0, 0.05, -0.09]}     center     >
-              <div  className='noEvents'  onPointerOver={() => {console.log('KURWAAA OVER'); }} onPointerEnter={() => {console.log('KURWAAA ENTER'); }} >co jest kurwa</div>
-          </Html>
-      </mesh> */}
+    <group visible={props.visible}>
       <group onClick={handleClick} onPointerEnter={() => {meshShow(true)} } onPointerOut={(e) => {  meshShow(false) }} ref={group} {...props} dispose={null}>
           <group name="Armature"  position={[0, 0, 4.13]} rotation={[0, 0, 0]}>
             <primitive object={nodes.Bone} />
@@ -210,7 +203,7 @@ export default function Model(props) {
           </group>
       </group>
       
-    </>
+    </group>
   )
 }
 

@@ -53,12 +53,15 @@ body {
   overflow: hidden;
   /* font-family: "Cormorant Garamond", serif; */
   font-family: "Abel", "Bebas Neue", sans-serif;
+  
 }
 
 #root, body, html {
 	height: 100%;
 	background-color: black;
 }
+
+
 
 .startScreen-canvas {
   z-index: 1;
@@ -126,11 +129,7 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  // background: radial-gradient(circle, rgba(255,255,255,.8) 0%, rgba(255,255,255,.8) 17%, rgba(255,255,255,0.1) 73%);
-  // background: radial-gradient(circle, rgba(255,255,255,.8) 0%, rgba(255,255,255,.8) 17%, rgba(255,255,255,0.1) 73%);
-  // background: radial-gradient(circle, rgba(0,0,0,.8) 0%,  rgba(0,0,0,0.1) 73%);
   background: rgba(0,0,0,.4);
-  // background: linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,.6) 50%, rgba(0,0,0,0.1) 100%), linear-gradient(90deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,.6) 50%, rgba(0,0,0,0.1) 100%) ;
   z-index: 4;
   backdrop-filter: blur(3px);
 
@@ -229,98 +228,6 @@ color: red;
   animation-play-state: running;
   -webkit-transform-origin: center center;
   transform-origin: center center;
-}
-
-
-////////////////////////////////////////////////////////==================== 
-////////////////////////////////////////////////////////==================== contentBox
-////////////////////////////////////////////////////////==================== 
-
-.contentHolder {
-  position: absolute;
-    z-index: 5;
-    width: calc(100% - 420px);
-    height: 100%;
-    transition: all .6s ease-in-out;
-    // left: calc(-100% + 500px);
-    left: 0;
-
-    
-  .contentBox {
-      @include neonBox;
-      border-left: 0;
-      position: absolute;
-      width: calc(100% - 50px);
-      left: 0;
-      height: calc(100% / 1.2 );
-      border-left: 0;
-      top: 50%;
-      transform: translate(0, -50%);
-      right: 100%;
-      background-color: rgba(0,0,0,.8);
-      z-index: 4;
-      user-select: none;
-      font-family: 'Noto Sans JP', sans-serif;
-      
-      
-      .content__name {
-        @include neonBox;
-        position: absolute;
-        background-color: rgba(0,0,0,.8);
-        padding: 15px 5px;
-        left: 100%;
-        top: 50%;
-        transform: translate(0, -50%);
-        cursor: pointer;
-        writing-mode: vertical-rl;
-        font-size: 2.5rem;
-        font-weight: bold;
-        transition: all .3s ease-in-out;
-        border-radius: 0 8px 8px 0;
-        font-family: 'Noto Sans JP', sans-serif;
-        user-select: none;
-        
-        
-        &::before {
-          content: 'HIDE '
-        }
-        &:hover {
-          position: absolute;
-        color: rgba(120, 219, 251, 1);
-        text-shadow: 0 0 5px white;
-        }
-      }
-  }
-  
-}
-
-.contentHolder-hidden {
-  // animation: hideToLeft 1.4s forwards;
-  left: calc(-100% + 500px);
-  .contentBox {
-    .content__name {
-      &::before {
-        content: 'SHOW '
-      }
-    }
-  }
-}
-
-.contentHolder-show {
-  // animation: hideToLeft 1.4s forwards;
-  left: 0;
-  .contentBox {
-    .content__name {
-      &::before {
-        content: 'SHOW '
-      }
-    }
-  }
-}
-
-.contentHolder-beforeNull {
-  // animation: hideToLeft 1.4s forwards;
-  left: -100%;
 }
 
 

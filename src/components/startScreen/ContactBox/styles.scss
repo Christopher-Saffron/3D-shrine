@@ -1,0 +1,51 @@
+.welcome__tab_flex {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    border-width: 3px;
+    border-radius: 4px 0 4px 20% !important;
+    gap: 50px;
+    padding: 25px 0;
+    width: max-content !important;
+    flex-wrap: wrap;
+    animation: fastShow .3s ease-in-out, fadeIn .3s ease-in-out;
+    .welcome__tab_flexItem {
+        color: white;
+        position: relative;
+        font-size: 1.2rem;
+        min-width: 150px;
+        animation: fadeIn .3s ease-in-out;
+        .welcome__tab_flexImg {
+            height: 40px;
+            width: 40px;
+            padding: 3px;
+            border-radius: 30%;
+            background-color: rgb(255, 1, 158);
+            border-radius: 15px;
+        }
+        p {
+            
+        }
+    }
+}
+
+@keyframes fastShow {
+    0% {
+        top: 55%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes fadeIn  {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+    }
+}

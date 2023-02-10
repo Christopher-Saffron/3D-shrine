@@ -50,10 +50,10 @@ const UIMainScreen = ({setMainContent, setnewCameraArgs}) => {
             <span className='checkmark'></span> */}
             <span className='destination'>UNITY</span>
           </li>
-          <li data-value='languages' onClick={(e) => { setnewCameraArgs([-9.7, 1.95, 14.9, -1, Math.PI /5, .9, 60, 'LANGUAGES'])}}>
+          <li data-value='Skills' onClick={(e) => { setnewCameraArgs([-9.7, 1.95, 14.9, -1, Math.PI /5, .9, 60, 'SKILLS'])}}>
             {/* <input className='interface__right_radio' type='radio' />
             <span className='checkmark'></span> */}
-            <span className='destination'>LANGUAGES</span>
+            <span className='destination'>SKILLS</span>
           </li>
           <li data-value='blog' onClick={(e) => { setnewCameraArgs([-6.5, 1.6, 5.5, 0, 0, 0, 50, 'BLOG'])}}>
             {/* <input className='interface__right_radio' type='radio' />
