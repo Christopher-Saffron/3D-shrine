@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import './styles.scss'
 
-import {Canvas, useFrame, useThree, extend } from '@react-three/fiber'
-import { OrbitControls, Environment, } from '@react-three/drei'
+import { extend } from '@react-three/fiber'
 import { EffectComposer} from '@react-three/postprocessing'
-import { BlurPass, Resizer, KernelSize, BlendFunction   } from 'postprocessing'
 
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
@@ -48,10 +46,13 @@ const App = () => {
     //////////  
     //// CAMERA ANIMATIONS ----
     //////////
-    const [newCameraArgs, setnewCameraArgsAppend] = useState([155, 1.15, 4.95, 0, Math.PI / 2, 0])
+    const [newCameraArgs, setnewCameraArgsAppend] = useState([155, 1.15, 4.95, 0, Math.PI / 2, 0, undefined])
     const [isAnimating, toggleIsAnimating] = useState(true)
 
     const setnewCameraArgs = (newCoords) => {
+
+      //// NO ANIMATION IF CLICKING ON THE SAME OBJECT
+      if (newCoords[7] === newCameraArgs[7]) {return}
 
       //// SMALL TRICK TO MAKE SURE THE FIRST ANIMATION GOES THROUGH, WITHOUT IT, THE CYCLE IS STUCK ON CONSTANT ANIMATION
       if (objectsToDecluter) {
@@ -63,23 +64,25 @@ const App = () => {
       ///CAMERA IS NOT MOVING, CAN BE CHANGED
       toggleIsAnimating(true);
       setnewCameraArgsAppend(newCoords);
+      console.log(newCoords)
 
     }
 
     //////////
     ////////// NO MOVEMENT STUCK ------------ FIX
     //////////
-    // useEffect(() => {
-    //   ////// sometimes, when the app uses the 'isAnimating' var, to stop the user from overclicking the navigation, it forgets(?) to free the value as it finishes
-    //   ///// SO WE CREATE A QUICK FIX FOR THAT BY SIMPLY CHANGING IT MANUALLY
-    //   if (isAnimating) {
-    //     setTimeout(() => {
-    //       if (isAnimating === true) {
-    //         toggleIsAnimating(false)
-    //       }
-    //     }, 3000)
-    //   }
-    // }, [isAnimating])
+    useEffect(() => {
+      ////// sometimes, when the app uses the 'isAnimating' var, to stop the user from overclicking the navigation, it forgets(?) to free the value as it finishes
+      ///// SO WE CREATE A QUICK FIX FOR THAT BY SIMPLY CHANGING IT MANUALLY
+      console.log(isAnimating)
+      // if (isAnimating) {
+      //   setTimeout(() => {
+      //     if (isAnimating === true) {
+      //       toggleIsAnimating(false)
+      //     }
+      //   }, 3000)
+      // }
+    }, [isAnimating])
 
     //////////
     ////////// allows more fps and particles
@@ -96,7 +99,7 @@ const App = () => {
       ///// THIS STARTS THE MAIN ZOOM ANIMATION, we could transport this fragment to the CameraController, but it could complicate it even more.
       if (stage === 2 ) {
         // setnewCameraFov(80)
-        setnewCameraArgs([0.5, 1.15, 4.95, 0, Math.PI / 2, 0, 80])
+        setnewCameraArgs([0.5, 1.15, 4.95, 0, Math.PI / 2, 0, 80, null])
       }
     }, [stage])
 
@@ -161,7 +164,7 @@ const App = () => {
         <CanvasComponent allowParticles={allowParticles} isAnimating={isAnimating} stage={stage}>
         {isAnimating || allowParticles  ? <FPSController fps={allowParticles ? 50 : 25} /> : '' }
           
-          <CameraController setMainContent={setMainContent} toggleIsAnimating={toggleIsAnimating} toggleWelcome={toggleWelcome} toggleMusic={toggleMusic} toggleObjectsToDecluter={toggleObjectsToDecluter} stage={stage} newCameraArgs={newCameraArgs}/>
+          <CameraController isAnimating={isAnimating} setMainContent={setMainContent} toggleIsAnimating={toggleIsAnimating} toggleWelcome={toggleWelcome} toggleMusic={toggleMusic} toggleObjectsToDecluter={toggleObjectsToDecluter} stage={stage} newCameraArgs={newCameraArgs}/>
             <StartScreen visible={stage===1} setStage={setStage}  />
             <MainScreen visible={stage===2} allowParticles={allowParticles} preset={preset} objectsToDecluter={objectsToDecluter} setnewCameraArgs={setnewCameraArgs} />
           

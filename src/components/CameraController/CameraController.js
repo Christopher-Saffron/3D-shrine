@@ -17,7 +17,7 @@ function lerp(x, y, a) {
 /////////////////////////////////////////////////////// The quick fix was to take the cameraController from the mainScreen, making it visible in both startScreen and mainScreen. And any useEffect, any code execution, anything, that happens during stage 1, ruins everything.
 /////////////////////////////////////////////////////// So the quick fix is to just keep using if (stage === 2) before doing something for the mainScreen.
 
-const CameraController = ({setMainContent, toggleIsAnimating, toggleWelcome, toggleMusic, toggleObjectsToDecluter, stage, newCameraArgs}) => {
+const CameraController = ({isAnimating, setMainContent, toggleIsAnimating, toggleWelcome, toggleMusic, toggleObjectsToDecluter, stage, newCameraArgs}) => {
   const { gl, camera } = useThree();
   const [initialAnimationPlayed, setInitialAnimationPlayed] = useState(false)
   const whiteBack = document.querySelector('.whiteBack')
@@ -125,7 +125,7 @@ const CameraController = ({setMainContent, toggleIsAnimating, toggleWelcome, tog
         }
       })
       /////// EVERY NEXT CAMERA CHANGE WILL HAPPEN HERE
-    } else if (stage === 2 && initialAnimationPlayed === true) {
+    } else if (stage === 2 && initialAnimationPlayed === true ) {
       apiCameraProps.start({
         cameraPosX : newCameraArgs[0],
         cameraPosY : newCameraArgs[1],
@@ -142,10 +142,12 @@ const CameraController = ({setMainContent, toggleIsAnimating, toggleWelcome, tog
           ////toggle animation so no other animation can be played
           toggleIsAnimating(true);
           ////change the current showing content
-          setMainContent(newCameraArgs[7])
+          setMainContent(null)
+          
         },
         onRest: () => {
           toggleIsAnimating(false);
+          setMainContent(newCameraArgs[7])
         },
         onChange:() => {
         }

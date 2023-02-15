@@ -1,11 +1,9 @@
 import React, {useState, useEffect, Suspense} from 'react'
 import {Canvas} from '@react-three/fiber'
-import {PerspectiveCamera, OrbitControls, useProgress } from '@react-three/drei'
-import LoaderComponent from './components/LoaderComponent/LoaderComponent'
+import { useProgress } from '@react-three/drei'
 const CanvasComponent = (props) => {
   const progress = useProgress();
   // const usProgress = useProgress();
-  const [frameLoopState, setFrameLoopState] = useState('demand')
   const [isLoading, toggleIsLoading] = useState(true)
 
   useEffect(() => {

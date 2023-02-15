@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 
 import Liski from './Liski/Liski'
 import AllObjectsFinal from './All/AllObjectsFinal'
-import Object from './All/Object3'
 
 import Lights from './Lights/Lights'
 import FogChange from './Fog/Fog'
