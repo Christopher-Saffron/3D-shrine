@@ -1,5 +1,5 @@
 import React from 'react'
-import { studniowka3, studniowka4} from '../../images'
+import { studniowka3, studniowka4} from '../../../../../constants/images'
 
 const SimpleEditing = ({showInModal}) => {
   return (

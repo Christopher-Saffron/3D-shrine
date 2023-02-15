@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGLTF, useAnimations, Html } from '@react-three/drei'
+import { Html } from '@react-three/drei'
 import './styles.scss'
 
 const LoaderComponent = ({loadingProgress}) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { website, servicesVideo } from '../../images'
+import { website, servicesVideo } from '../../../../../constants/images'
 
 const WebsiteVideos = () => {
   return (

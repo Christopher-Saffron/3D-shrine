@@ -12,8 +12,6 @@ const RectangleGateNav = () => {
         <nav className="startScreen__navbar ">
             <div className="container">
                 <div className="logo">
-                    {/* <div href="#">Your Logo</div> */}
-                    {/* <img src={process.env.PUBLIC_URL + '/foxS6.svg'} />  */}
                 </div>
                 <div className="main_list">
                     <ul className="navlinks">

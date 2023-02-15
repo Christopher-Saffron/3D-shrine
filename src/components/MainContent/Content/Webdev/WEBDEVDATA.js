@@ -1,4 +1,4 @@
-import { portfoliochoose2, portfolioheavy2, portfoliolight2, szafranprojekt2,  } from '../images'
+import { portfoliochoose2, portfolioheavy2, portfoliolight2, szafranprojekt2,  } from '../../../../constants/images'
 
 
 

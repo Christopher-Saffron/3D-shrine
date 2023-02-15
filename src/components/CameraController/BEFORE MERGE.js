@@ -1,14 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {PerspectiveCamera, OrbitControls} from '@react-three/drei'
-import { useSpring, animated,  } from '@react-spring/three'
+import { useSpring,  } from '@react-spring/three'
 import { easings} from "react-spring";
-import { useThree,useFrame } from '@react-three/fiber';
-import * as THREE from 'three'
-
-function lerp(x, y, a) {
-  const r = (1 - a) * x + a * y
-  return Math.abs(x - y) < 0.001 ? y : r
-}
+import { useThree,} from '@react-three/fiber';
 
 
 

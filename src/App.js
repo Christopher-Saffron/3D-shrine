@@ -7,10 +7,6 @@ import { EffectComposer} from '@react-three/postprocessing'
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
 
-// import LoadingComponent from '../LoadingComponent/LoadingComponent';
-
-
-
 //////// STARTING SETUP
 import VideoPlayer from './components/VideoPlayer/VideoPlayer'
 import BackgroundVidLoop from './assets/video/BackgroundVidLoop.mp4'
@@ -64,25 +60,8 @@ const App = () => {
       ///CAMERA IS NOT MOVING, CAN BE CHANGED
       toggleIsAnimating(true);
       setnewCameraArgsAppend(newCoords);
-      console.log(newCoords)
 
     }
-
-    //////////
-    ////////// NO MOVEMENT STUCK ------------ FIX
-    //////////
-    useEffect(() => {
-      ////// sometimes, when the app uses the 'isAnimating' var, to stop the user from overclicking the navigation, it forgets(?) to free the value as it finishes
-      ///// SO WE CREATE A QUICK FIX FOR THAT BY SIMPLY CHANGING IT MANUALLY
-      console.log(isAnimating)
-      // if (isAnimating) {
-      //   setTimeout(() => {
-      //     if (isAnimating === true) {
-      //       toggleIsAnimating(false)
-      //     }
-      //   }, 3000)
-      // }
-    }, [isAnimating])
 
     //////////
     ////////// allows more fps and particles

@@ -2,15 +2,6 @@
 import React from 'react'
 import './styles.scss'
 
-// const UIMainScreen = () => {
-//   return (
-//     <div className='UIMainScreen'>
-//     aaaa
-//     </div>
- 
-//     )
-// }
-
 const UIMainScreenOptions = ({toggleMusic, setPreset, toggleAllowParticles,  setnewCameraArgs, }) => {
 
     
@@ -30,7 +21,6 @@ const UIMainScreenOptions = ({toggleMusic, setPreset, toggleAllowParticles,  set
     return (
       <div className='interface__options' style={{display: 'none'}}>
         <div className='interface__options_line'>
-          {/* <span>BIRD VIEW</span> */}
           <img className='interface__options_img' onClick={() => { setnewCameraArgs([-7, 12, 9, -Math.PI/2, 0, 0, 75, null]) }} src={process.env.PUBLIC_URL + '/icon.svg'} alt='' />
           <img className='interface__options_img interface__options_disabled' onClick={(e) => {toggleAllowParticles(prevState => {return !prevState}); e.target.classList.toggle('interface__options_disabled')}} src={process.env.PUBLIC_URL + '/risk.svg'} alt='' />
           <img className='interface__options_img interface__options_alwaysOn' onClick={(e) => {hideMenu(); e.target.classList.toggle('interface__options_disabled')}} src={process.env.PUBLIC_URL + '/eye3.svg'} alt='' />

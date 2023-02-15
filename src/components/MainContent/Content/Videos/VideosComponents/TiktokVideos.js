@@ -1,5 +1,5 @@
 import React from 'react'
-import { tiktok1, tiktok2, tiktok3, tiktok4, tiktok5, tiktok6 } from '../../images'
+import { tiktok1, tiktok2, tiktok3, tiktok4, tiktok5, tiktok6 } from '../../../../../constants/images'
 
 const TiktokVideos = ({showInModal}) => {
   return (

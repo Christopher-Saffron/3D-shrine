@@ -7,16 +7,12 @@ const ProjectViewer = ({selectedProject}) => {
   switch (selectedProject) {
     case 'SZAFRAN PROJEKT':
       return <SzafranProjekt />
-    break;
     case 'Portfolio 2D':
       return <Portfolio2D />
-    break;
     case 'Portfolio 3D':
       return <Portfolio3D  />
-    break;
     case 'Portfolio START':
       return <PortfolioChoose  />
-    break;
     default:
       return;
   }
@@ -79,9 +75,3 @@ const Webdev = () => {
 }
 
 export default Webdev
-
-{/* <div>
-        a
-        <img src={process.env.PUBLIC_URL + '/unity.svg'} alt='' /> 
-    </div> */}
-

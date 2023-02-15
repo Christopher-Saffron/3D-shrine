@@ -1,5 +1,5 @@
 import React from 'react'
-import { loop1, cube, fluid, hole, scifi, sun, tori1, tori2, triangle, vicecity, water } from '../../images'
+import { loop1, cube, fluid, hole, scifi, sun, tori1, tori2, triangle, vicecity, water } from '../../../../../constants/images'
 
 const LoopedVideos = ({showInModal}) => {
   return (

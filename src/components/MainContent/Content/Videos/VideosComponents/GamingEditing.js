@@ -1,5 +1,5 @@
 import React from 'react'
-import { gaming1, gaming2, gaming3} from '../../images'
+import { gaming1, gaming2, gaming3} from '../../../../../constants/images'
 
 const GamingEditing = ({showInModal}) => {
   return (

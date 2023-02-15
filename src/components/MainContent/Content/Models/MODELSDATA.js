@@ -1,4 +1,4 @@
-import {forest8, garfield1, keyboard1, japanese1, japanese5, shoe2, sculpting, castle1, sinon, rimuru3, mirio3, hayasaka, ichigo,  ramiris1, shrine1, lightpage8, } from '../images'
+import {forest8, garfield1, keyboard1, japanese1, japanese5, shoe2, sculpting, castle1, sinon, rimuru3, mirio3, hayasaka, ichigo,  ramiris1, shrine1, lightpage8, } from '../../../../constants/images'
 export const MODELSDATA = [
     {
       imgSrc: shrine1,

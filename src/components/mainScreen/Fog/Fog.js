@@ -16,7 +16,6 @@ function FogChange({visible}) {
         }
       })
   
-    // return <animated.div>{number.to(n => n.toFixed(2))}</animated.div>
     return visible && <animated.fog visible={visible} attach='fog' color={'#ffffff'} near={fogValues.near} far={fogValues.far} /> 
   }
 

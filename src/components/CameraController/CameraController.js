@@ -1,14 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {PerspectiveCamera, OrbitControls} from '@react-three/drei'
-import { useSpring, animated,  } from '@react-spring/three'
+import { useSpring,  } from '@react-spring/three'
 import { easings} from "react-spring";
-import { useThree,useFrame } from '@react-three/fiber';
-import * as THREE from 'three'
-
-function lerp(x, y, a) {
-  const r = (1 - a) * x + a * y
-  return Math.abs(x - y) < 0.001 ? y : r
-}
+import { useThree} from '@react-three/fiber';
 
 
 
@@ -17,8 +10,8 @@ function lerp(x, y, a) {
 /////////////////////////////////////////////////////// The quick fix was to take the cameraController from the mainScreen, making it visible in both startScreen and mainScreen. And any useEffect, any code execution, anything, that happens during stage 1, ruins everything.
 /////////////////////////////////////////////////////// So the quick fix is to just keep using if (stage === 2) before doing something for the mainScreen.
 
-const CameraController = ({isAnimating, setMainContent, toggleIsAnimating, toggleWelcome, toggleMusic, toggleObjectsToDecluter, stage, newCameraArgs}) => {
-  const { gl, camera } = useThree();
+const CameraController = ({setMainContent, toggleIsAnimating, toggleWelcome, toggleMusic, toggleObjectsToDecluter, stage, newCameraArgs}) => {
+  const {  camera } = useThree();
   const [initialAnimationPlayed, setInitialAnimationPlayed] = useState(false)
   const whiteBack = document.querySelector('.whiteBack')
 
@@ -37,18 +30,8 @@ const CameraController = ({isAnimating, setMainContent, toggleIsAnimating, toggl
         tension: 120,
       },
       onRest: () => {
-        // console.log(gl);
-        // console.log(camera)
       },
       onChange: (value) => {
-        // camera.position.x = value.value.cameraPosX;
-        // camera.position.y = value.value.cameraPosY;
-        // camera.position.z = value.value.cameraPosZ;
-        // camera.rotation.x = value.value.cameraRotX;
-        // camera.rotation.y = value.value.cameraRotY;
-        // camera.rotation.z = value.value.cameraRotZ;
-        // camera.position = new THREE.Vector3(value.value.cameraPosX, value.value.cameraPosY, value.value.cameraPosZ)
-        // camera.position = new THREE.Vector3(0,0,0);
         camera.position.set(value.value.cameraPosX, value.value.cameraPosY, value.value.cameraPosZ);
         camera.rotation.set(value.value.cameraRotX, value.value.cameraRotY, value.value.cameraRotZ)
         camera.fov = value.value.cameraFov;
@@ -103,9 +86,6 @@ const CameraController = ({isAnimating, setMainContent, toggleIsAnimating, toggl
           setInitialAnimationPlayed(true)
           toggleObjectsToDecluter(false)
         }
-
-          ///// START PLAYING MUSIC
-          // toggleMusic(true)
 
           ///// SHOW MENU ON FINISH
           document.querySelector('.interface__right_holder').style.display = 'block';

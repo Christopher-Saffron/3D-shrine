@@ -33,7 +33,6 @@ const WelcomeScreen = ({toggleWelcome}) => {
             </div>
           </div>
         </div>
-        {/* <div onClick={() => {toggleWelcome(false)}}>Click me to close welcome div</div> */}
       </div>
     </div>
   )

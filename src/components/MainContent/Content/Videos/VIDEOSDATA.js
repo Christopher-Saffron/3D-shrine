@@ -1,4 +1,4 @@
-import {  gaming1, loop1, website, tiktok3, studniowka3  } from '../images'
+import {  gaming1, loop1, website, tiktok3, studniowka3  } from '../../../../constants/images'
 
 
 

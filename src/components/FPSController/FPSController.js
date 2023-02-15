@@ -36,27 +36,4 @@ function FPSController({ fps }) {
     return null;
   }
 
-
-// function FPSController({fps}) {
-//     const {invalidate, clock, advance} = useThree();
-//     useEffect(() => {
-//         let delta = 0;
-//         const interval = 1/fps;
-//         const update = () => {
-//             requestAnimationFrame(update);
-//             delta += clock.getDelta();
-
-//             if (delta > interval) {
-//                 invalidate();
-//                 delta = delta % interval;
-//             }
-//         }
-
-//         update();
-//     }, [])
-
-//     return null;
-// }
-
-
   export default FPSController;

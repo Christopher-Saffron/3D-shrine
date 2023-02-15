@@ -211,7 +211,7 @@ export {
 
       ///BRICSCAD
       bricscad1,
-        bricscad2,
+      bricscad2,
       bricscad3,
       bricscad4,
       bricscad5,

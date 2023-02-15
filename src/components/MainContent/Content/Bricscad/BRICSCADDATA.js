@@ -1,4 +1,4 @@
-import {  bricscad3, bricscad4, bricscad5  } from '../images'
+import {  bricscad3, bricscad4, bricscad5  } from '../../../../constants/images'
 
 
 
