@@ -1,18 +1,67 @@
 import {useState} from 'react'
 import { WEBDEVDATA } from './WEBDEVDATA'
 
-import { SzafranProjekt, Portfolio2D, Portfolio3D, PortfolioChoose } from './WebdevProjects'
+import { SzafranProjekt, Portfolio2D, Portfolio3D, PortfolioChoose, SzafranProjektNextJs, Instagram, Amazon, Airbnb, Hulu, Facebook, Blog, MementoMori, SimpleServer, OldServer, TicTacToe, Battleships, Restaurant, Pomodoro, JpLearning } from './WebdevProjects'
 
 const ProjectViewer = ({selectedProject}) => {
   switch (selectedProject) {
     case 'SZAFRAN PROJEKT':
-      return <SzafranProjekt />
+      return <SzafranProjekt  />
+    break;
+    case 'SZAFRAN PROJEKT migration to NEXTJS':
+      return <SzafranProjektNextJs  />
+    break;
+    case 'Instagram':
+      return <Instagram  />
+    break;
+    case 'Amazon':
+      return <Amazon  />
+    break;
+    case 'Airbnb':
+      return <Airbnb  />
+    break;
+    case 'Hulu':
+      return <Hulu  />
+    break;
+    case 'Facebook':
+      return <Facebook  />
+    break;
+    case 'Blog':
+      return <Blog  />
+    break;
+    case 'Memento Mori':
+      return <MementoMori  />
+    break;
+    case 'File archive for bricscad projects':
+      return <SimpleServer  />
+    break;
+    case 'File archive for bricscad projects - older version; client + server':
+      return <OldServer  />
+    break;
+    case '[2019] TIC-TAC-TOE with a (fake) chat':
+      return <TicTacToe  />
+    break;
+    case '[2019] Classic Battleship game':
+      return <Battleships  />
+    break;
+    case '[2019] Restaurant website':
+      return <Restaurant  />
+    break;
+    case '[2019] Pomodoro website':
+      return <Pomodoro  />
+    break;
+    case '[2019] Japanese learning website':
+      return <JpLearning  />
+    break;
     case 'Portfolio 2D':
-      return <Portfolio2D />
+      return <Portfolio2D  />
+    break;
     case 'Portfolio 3D':
       return <Portfolio3D  />
+    break;
     case 'Portfolio START':
       return <PortfolioChoose  />
+    break;
     default:
       return;
   }
