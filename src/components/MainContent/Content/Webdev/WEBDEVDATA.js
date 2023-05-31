@@ -10,12 +10,13 @@ export const WEBDEVDATA = [
     images: ['/icons/react.png', '/icons/sass.svg', '/icons/gsap.png',  '/icons/mui.png', '/icons/node.png', '/icons/mongodb.jpg', '/icons/gimp.jpg'],
     tags: ['official', 'landingPage', 'frontEnd', 'backEnd', 'diskManagement', 'gsap', 'mui', 'sass', 'maps', 'react-leaflet', 'server', 'logo', 'design', 'imageEdit', 'video', 'animation',],
   },
+  
   {
-    imgSrc: 'szafranprojektnextjs.jpg',
-    projectName: 'SZAFRAN PROJEKT migration to NEXTJS',
-    description: 'Official website for a road project company - NEXTJS + TAILWIND',
-    images: ['/icons/react.png', '/icons/nextjsLogo.png', '/icons/tailwind.png','/icons/gimp.jpg'],
-    tags: ['official', 'landingPage',  'frontEnd', 'logo', 'nextjs', 'tailwind', 'design', 'imageEdit',],
+    imgSrc: 'airbnb.jpg',
+    projectName: 'Airbnb',
+    description: 'AirBnB with 3D models, STRIPE and Paypal, maps, login and reservation.',
+    images: ['/icons/react.png', '/icons/nextjsLogo.png',  '/icons/tailwind.png','/icons/blender.jpg', '/icons/threejs.png', '/icons/nextauth.png', '/icons/stripe.png', '/icons/paypal.png','/icons/mongodb.jpg',],
+    tags: ['frontEnd', 'nextjs', 'mapbox', 'tailwind', 'date-fns', 'maps', '3dmodels', 'blender', 'mongoose', 'mongodb', 'mongodb-atlas', 'paypal','stripe', 'google-auth', 'payment',]
   },
   {
     imgSrc: 'portfolioheavy2.jpg',
@@ -39,11 +40,11 @@ export const WEBDEVDATA = [
     tags: ['frontEnd', 'backend', 'nextjs', 'next-auth', 'firebase', 'react-redux', 'google-auth', 'stripe', 'tailwind', 'responsive']
   },
   {
-    imgSrc: 'airbnb.jpg',
-    projectName: 'Airbnb',
-    description: 'Small airbnb copy that works with maps',
-    images: ['/icons/react.png', '/icons/nextjsLogo.png',  '/icons/tailwind.png'],
-    tags: ['frontEnd', 'nextjs', 'mapbox', 'tailwind', 'date-fns', 'maps']
+    imgSrc: 'szafranprojektnextjs.jpg',
+    projectName: 'SZAFRAN PROJEKT migration to NEXTJS',
+    description: 'Official website for a road project company - NEXTJS + TAILWIND',
+    images: ['/icons/react.png', '/icons/nextjsLogo.png', '/icons/tailwind.png','/icons/gimp.jpg'],
+    tags: ['official', 'landingPage',  'frontEnd', 'logo', 'nextjs', 'tailwind', 'design', 'imageEdit',],
   },
   {
     imgSrc: 'hulu.jpg',
