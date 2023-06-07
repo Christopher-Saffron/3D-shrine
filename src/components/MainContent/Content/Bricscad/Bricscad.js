@@ -12,7 +12,7 @@ const ProjectViewer = ({selectedProject}) => {
           case 'Map stocktaking':
             return <MapStocktaking />
           break;
-          case 'Temporary Road design':
+          case 'Temporary Traffic Management Design':
             return <TemporaryRoadDesign />
           break;
       default:

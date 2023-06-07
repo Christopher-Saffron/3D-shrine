@@ -28,7 +28,7 @@ const Resume = () => {
                     Work experience
                   </div>
                   <div className='resume__education_div'>
-                    <p className='resume__education_text'>Road/Traffic Design - BricsCad Projects</p>
+                    <p className='resume__education_text'>Temporary Traffic Management Desginer - BricsCad Projects</p>
                     <p className='resume__education_grey'>2018 - now</p>
                   </div>
                   <div className='resume__education_div'>
@@ -136,12 +136,12 @@ const Resume = () => {
                         <div className='resume__skillBar_inside' style={{width: '65%'}} />
                       </div>
                     </div>
-                    <div className='resume__skill'>
+                    {/* <div className='resume__skill'>
                       <span className='resume__skillName'>Googling</span>
                       <div className='resume__skillBar'>
                         <div className='resume__skillBar_inside' style={{width: '100%'}} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className='resume__languages'>
@@ -200,9 +200,9 @@ const Resume = () => {
             
             <div className='resume__box_pillarRight' >
                 <div className='resume__FaceImgBox'>
-                    <img src='' alt='' className='resume__FaceImg' />
+                    <img src='./11.jpg' alt='' className='resume__FaceImg' />
                     <p className='resume__name'>Krzysztof Szafran</p>
-                    <p className='resume__description'>Road work design</p>
+                    <p className='resume__description'>Temporary traffic management designer</p>
                     <p className='resume__description'>Web Development</p>
                     
                 </div>

@@ -7,7 +7,7 @@ const TemporaryRoadDesign = ({showInModal}) => {
       <div className='projectShow__flexBox'>
         
         <div className='projectShow__infoPanel'>
-          <p><span className='projectShow__secondColor'>Project Title:</span> Temporary Road design</p>
+          <p><span className='projectShow__secondColor'>Project Title:</span> Temporary Traffic Management Design</p>
           <p><span className='projectShow__secondColor'>Tools used:</span> Bricscad, Paint.net, Gimp</p>
           <p><span className='projectShow__secondColor'>Live Link:</span></p>
         </div>

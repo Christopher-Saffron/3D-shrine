@@ -6,7 +6,7 @@ export const WEBDEVDATA = [
   {
     imgSrc: 'szafranprojekt2.jpg',
     projectName: 'SZAFRAN PROJEKT',
-    description: 'Official website for a road project company',
+    description: 'Official website for a temporary traffic management designing company',
     images: ['/icons/react.png', '/icons/sass.svg', '/icons/gsap.png',  '/icons/mui.png', '/icons/node.png', '/icons/mongodb.jpg', '/icons/gimp.jpg'],
     tags: ['official', 'landingPage', 'frontEnd', 'backEnd', 'diskManagement', 'gsap', 'mui', 'sass', 'maps', 'react-leaflet', 'server', 'logo', 'design', 'imageEdit', 'video', 'animation',],
   },
@@ -42,7 +42,7 @@ export const WEBDEVDATA = [
   {
     imgSrc: 'szafranprojektnextjs.jpg',
     projectName: 'SZAFRAN PROJEKT migration to NEXTJS',
-    description: 'Official website for a road project company - NEXTJS + TAILWIND',
+    description: 'Official website for a temporary traffic management designing company - NEXTJS + TAILWIND',
     images: ['/icons/react.png', '/icons/nextjsLogo.png', '/icons/tailwind.png','/icons/gimp.jpg'],
     tags: ['official', 'landingPage',  'frontEnd', 'logo', 'nextjs', 'tailwind', 'design', 'imageEdit',],
   },

@@ -45,7 +45,7 @@ const programming = [
     },
     {
         skillName: 'NEXT.JS',
-        skillImg: './icons/js.png'
+        skillImg: './icons/nextjsLogo.png'
     },
     {
         skillName: 'FIREBASE',

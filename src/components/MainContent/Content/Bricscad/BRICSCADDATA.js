@@ -15,7 +15,7 @@ export const BRICSCADDATA = [
   },
   {
     imgSrc: bricscad5,
-    projectName: 'Temporary Road design',
+    projectName: 'Temporary Traffic Management Design',
     description: 'Such projects are used during holiday/group/social events in order to carefully and safely control the traffic.',
   },
 
