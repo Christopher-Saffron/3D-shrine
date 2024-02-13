@@ -3,7 +3,7 @@
 
 #### In this project I tried to create a 3D environment to showcase everything I can do. Unfortunately, to nobody's surprise, a web browser is not the best place for rendering huge 3d objects, and thus I had to resort to using low-poly objects.
 
-## Used:
+## What this project uses:
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Threejs](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
