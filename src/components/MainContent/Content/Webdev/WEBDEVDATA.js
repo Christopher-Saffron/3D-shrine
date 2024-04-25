@@ -13,8 +13,8 @@ export const WEBDEVDATA = [
   
   {
     imgSrc: 'airbnb.jpg',
-    projectName: 'Airbnb',
-    description: 'AirBnB with 3D models, STRIPE and Paypal, maps, login and reservation.',
+    projectName: 'Nippon Air',
+    description: 'Nippon Air with 3D models, STRIPE and Paypal, maps, login and reservation.',
     images: ['/icons/react.png', '/icons/nextjsLogo.png',  '/icons/tailwind.png','/icons/blender.jpg', '/icons/threejs.png', '/icons/nextauth.png', '/icons/stripe.png', '/icons/paypal.png','/icons/mongodb.jpg',],
     tags: ['frontEnd', 'nextjs', 'mapbox', 'tailwind', 'date-fns', 'maps', '3dmodels', 'blender', 'mongoose', 'mongodb', 'mongodb-atlas', 'paypal','stripe', 'google-auth', 'payment',]
   },
