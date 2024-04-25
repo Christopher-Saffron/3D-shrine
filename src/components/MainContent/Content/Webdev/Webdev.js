@@ -17,7 +17,7 @@ const ProjectViewer = ({selectedProject}) => {
     case 'Amazon':
       return <Amazon  />
     break;
-    case 'Airbnb':
+    case 'Nippon Air':
       return <Airbnb  />
     break;
     case 'Hulu':
